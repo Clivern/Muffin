@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  key: Key01
-  value: Value01
+  key: key01
+  value: value01
   autoload: false
 
 two:
-  key: Key02
-  value: Value02
+  key: key02
+  value: value02
+  autoload: true
+
+three:
+  key: key03
+  value: value03
   autoload: true

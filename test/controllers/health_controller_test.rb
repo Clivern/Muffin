@@ -11,7 +11,7 @@
 require "test_helper"
 
 class HealthControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test "should get health" do
     get "/_health"
     assert_response :success
     assert_equal '{"status":"ok"}', @response.body
