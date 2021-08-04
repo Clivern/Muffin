@@ -56,18 +56,18 @@ module SnippetHelper
         raise Exception.new "Error while building docker image: #{result.error}"
       end
 
-      return result.output
+      result.output
     end
 
     # Run the code using the docker image
     def run_script
-      return AwesomeSpawn.run("docker run --rm -v #{@local_path}/#{slug}:#{@local_path}/#{slug} #{@language}:#{@version} #{@language} #{@local_path}/#{@slug}/script.py")
+      result = AwesomeSpawn.run("docker run --rm -v #{@local_path}/#{slug}:#{@local_path}/#{slug} #{@language}:#{@version} #{@language} #{@local_path}/#{@slug}/script.py")
 
       if result.exit_status != 0 || result.error != ""
         raise Exception.new "Error while running the script: #{result.error}"
       end
 
-      return result.output
+      result.output
     end
 
     attr_reader :local_path
