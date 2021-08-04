@@ -15,6 +15,7 @@ class SnippetTest < ActiveSupport::TestCase
     snippet = Snippet.create(
       slug: '4f76f879128862abdac5b200e9ac7d8f',
       language: 'ruby',
+      version: '1.0.0',
       title: 'Hello World',
       code: '....',
       is_public: false,
@@ -26,6 +27,7 @@ class SnippetTest < ActiveSupport::TestCase
     assert snippet.valid?
     assert_equal '4f76f879128862abdac5b200e9ac7d8f', snippet.slug
     assert_equal 'ruby', snippet.language
+    assert_equal '1.0.0', snippet.version
     assert_equal '....', snippet.code
     assert_equal 'Hello World', snippet.title
     assert_equal '....', snippet.password

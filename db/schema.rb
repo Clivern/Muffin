@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_185602) do
   create_table "snippets", force: :cascade do |t|
     t.string "slug"
     t.string "language"
+    t.string "version"
     t.string "title"
     t.text "code"
     t.boolean "is_public"

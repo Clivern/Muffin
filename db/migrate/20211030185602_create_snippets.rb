@@ -13,6 +13,7 @@ class CreateSnippets < ActiveRecord::Migration[6.1]
     create_table :snippets do |t|
       t.string :slug
       t.string :language
+      t.string :version
       t.string :title
       t.text :code
       t.boolean :is_public

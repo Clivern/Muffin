@@ -37,6 +37,7 @@ class SnippetController < ApiController
     @snippet = Snippet.create(
       slug: @slug,
       language: data["language"] == nil ? '' : data["language"],
+      version: data["version"] == nil ? '' : data["version"],
       title: data["title"] == nil ? '' : data["title"],
       code: data["code"] == nil ? '' : data["code"],
       password: data["password"] == nil ? '' : data["password"],
@@ -49,6 +50,35 @@ class SnippetController < ApiController
       render json: @snippet, status: 201
     else
       render json: {'errorMessage': 'Unable to create a new snippet'}, status: 500
+    end
+  end
+
+  # Runs a Snippet
+  # https://gist.github.com/Clivern/a7b03a4d90da991c49aa976b79e345ca
+  def run
+    @snippet = Snippet.find_by_slug(params[:slug])
+
+    if @snippet
+      # @TODO Adjust to dynamic path
+      runner = SnippetHelper::get_runner(
+        @snippet.language.to_sym,
+        "/etc/muffin",
+        @snippet.version,
+        @snippet.slug,
+        @snippet.code
+      )
+
+      begin
+        runner.isolate_environment
+        runner.build_image
+        output = runner.run_script
+
+        render json: {'output': output}, status: 200
+      rescue => e
+        render json: {'errorMessage': 'Failure while running the code.'}, status: 400
+      end
+    else
+      render json: {'errorMessage': 'Snippet not found.'}, status: 404
     end
   end
 end
