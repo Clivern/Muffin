@@ -1,38 +1,33 @@
-
-<!doctype html>
-<html>
-	<head>
-		<title>Muffin - Coding Playground</title>
-		<link rel="stylesheet" href="https://play.golang.org/static/style.css">
-	</head>
-	<body itemscope itemtype="http://schema.org/CreativeWork">
-		<input type="button" value="Run" id="embedRun">
-		<div id="banner">
-			<div id="head" itemprop="name">Muffin - Coding Playground</div>
-			<input type="button" value="Run" id="run">
-			<input type="button" value="Share" id="share">
-			<input type="text" id="shareURL">
-			<select>
-				<option value="python">Python</option>
-				<option value="php">PHP</option>
-				<option value="ruby">Ruby</option>
-				<option value="golang">Golang</option>
-				<option value="java">Java</option>
-			</select>
-			<input type="button" value="About" id="aboutButton">
-		</div>
-		<div id="wrap">
-			<textarea itemprop="description" id="code" name="code" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">package main
-
-import (
-	&#34;fmt&#34;
-)
-
-func main() {
-	fmt.Println(&#34;Hello, playground&#34;)
-}
-</textarea>
-		</div>
-		<div id="output"></div>
-	</body>
-</html>
+<input type="button" value="Run" id="embedRun">
+<div id="banner">
+	<div id="head" itemprop="name">Muffin Coding Playground</div>
+	<input type="button" value="Run" id="run">
+	<input type="button" value="Share" id="share">
+	<input type="text" id="shareURL">
+	<select>
+		<option value="python-3.6">Python 3.6</option>
+		<option value="python-3.7">Python 3.7</option>
+		<option value="python-3.8">Python 3.8</option>
+		<option value="python-3.9">Python 3.9</option>
+		<option value="php-7.4">PHP 7.4</option>
+		<option value="php-8.0">PHP 8.0</option>
+		<option value="ruby-2.6.8">Ruby 2.6.8</option>
+		<option value="ruby-2.7.4">Ruby 2.7.4</option>
+		<option value="ruby-3.0.2">Ruby 3.0.2</option>
+		<option value="golang-1.13">Golang 1.13</option>
+		<option value="golang-1.14">Golang 1.14</option>
+		<option value="golang-1.15">Golang 1.15</option>
+		<option value="golang-1.16">Golang 1.16</option>
+		<option value="golang-1.17">Golang 1.17</option>
+		<option value="java-1.8">Java 1.8</option>
+		<option value="java-1.9">Java 1.9</option>
+		<option value="java-1.10">Java 1.10</option>
+		<option value="java-1.11">Java 1.11</option>
+		<option value="rust-1.56.1">Rust 1.56.1</option>
+	</select>
+	<input type="button" value="About" id="aboutButton">
+</div>
+<div id="wrap">
+	<textarea itemprop="description" id="code" name="code" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">print("Hello World!")</textarea>
+</div>
+<div id="output"></div>
