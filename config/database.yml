@@ -20,6 +20,16 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#  <<: *default
+#  database: db/production.sqlite3
+
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("MUFFIN_DB_HOST") { '127.0.0.1' } %>
+  username: <%= ENV.fetch("MUFFIN_DB_USERNAME"){ 'root' } %>
+  password: <%= ENV.fetch("MUFFIN_DB_PASSWORD") { 'secret' } %>
+  port: <%= ENV.fetch("MUFFIN_DB_PORT") { 3306 } %>
+  database: <%= ENV.fetch("MUFFIN_DB_NAME") { 'muffin' } %>

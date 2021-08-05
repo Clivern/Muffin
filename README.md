@@ -31,6 +31,11 @@ $ make setup
 To run the application:
 
 ```zsh
+$ cp .env .env.local
+# Then adjust .env.local
+$ source .env.local
+$ export $(cut -d= -f1 .env.local)
+
 $ make run
 ```
 
