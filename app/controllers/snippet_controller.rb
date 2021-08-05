@@ -53,16 +53,15 @@ class SnippetController < ApiController
     end
   end
 
-  # Runs a Snippet
+  # Runs a snippet and return output
   # https://gist.github.com/Clivern/a7b03a4d90da991c49aa976b79e345ca
-  def run
+  def output
     @snippet = Snippet.find_by_slug(params[:slug])
 
     if @snippet
-      # @TODO Adjust to dynamic path
       runner = SnippetHelper::get_runner(
         @snippet.language.to_sym,
-        "/etc/muffin",
+        Rails.root.join("storage"),
         @snippet.version,
         @snippet.slug,
         @snippet.code

@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   # Snippet Routes
   get "/api/v1/snippet/:slug", to: "snippet#show"
-  get "/api/v1/snippet/:slug/run", to: "snippet#run"
+  get "/api/v1/snippet/:slug/output", to: "snippet#output"
   post "/api/v1/snippet", to: "snippet#create"
 end
