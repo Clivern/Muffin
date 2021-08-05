@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.2" width="240" />
+    <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.3" width="240" />
     <h3 align="center">Muffin</h3>
     <p align="center">Coding Playground Platform.</p>
     <p align="center">
@@ -7,10 +7,10 @@
             <img src="https://github.com/Clivern/Muffin/actions/workflows/build.yml/badge.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/releases">
-            <img src="https://img.shields.io/badge/Version-0.1.2-red.svg">
+            <img src="https://img.shields.io/badge/Version-0.1.3-red.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/blob/master/LICENSE">
-            <img src="https://img.shields.io/badge/LICENSE-MIT-orange.svg">
+            <img src="https://img.shields.io/badge/LICENSE-MIT-cyan.svg">
         </a>
     </p>
 </p>
@@ -20,7 +20,7 @@
 
 ### Getting Started
 
-In order to run muffin, you need `ruby` `>=` `2.7.4` and `nodejs`. Then run the following commands:
+In order to run `muffin`, you need `ruby` `>=` `2.7.4` and `nodejs`. Then run the following commands:
 
 ```zsh
 $ gem install bundler
