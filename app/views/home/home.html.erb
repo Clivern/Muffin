@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Muffin - Coding Playground</title>
+		<link rel="stylesheet" href="https://play.golang.org/static/style.css">
+	</head>
+	<body itemscope itemtype="http://schema.org/CreativeWork">
+		<input type="button" value="Run" id="embedRun">
+		<div id="banner">
+			<div id="head" itemprop="name">Muffin - Coding Playground</div>
+			<input type="button" value="Run" id="run">
+			<input type="button" value="Share" id="share">
+			<input type="text" id="shareURL">
+			<select>
+				<option value="python">Python</option>
+				<option value="php">PHP</option>
+				<option value="ruby">Ruby</option>
+				<option value="golang">Golang</option>
+				<option value="java">Java</option>
+			</select>
+			<input type="button" value="About" id="aboutButton">
+		</div>
+		<div id="wrap">
+			<textarea itemprop="description" id="code" name="code" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">package main
+
+import (
+	&#34;fmt&#34;
+)
+
+func main() {
+	fmt.Println(&#34;Hello, playground&#34;)
+}
+</textarea>
+		</div>
+		<div id="output"></div>
+	</body>
+</html>

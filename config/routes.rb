@@ -9,6 +9,7 @@
 #
 
 Rails.application.routes.draw do
+  get '/', to: 'home#show'
   get '_health', to: 'health#index'
 
   # Option Routes
