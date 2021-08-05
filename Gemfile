@@ -37,6 +37,9 @@ gem 'awesome_spawn', '~> 1.5'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# MySQL gem
+gem 'mysql2', '~> 0.5.3'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
