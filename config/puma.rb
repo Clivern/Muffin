@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
+#
+# Muffin - Transactional Email Service.
+#
+# Copyright 2021 Clivern. All rights reserved.
+# Use of this source code is governed by the MIT
+# license that can be found in the LICENSE file.
+#
+
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
