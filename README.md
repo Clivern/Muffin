@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.0" width="240" />
+    <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.1" width="240" />
     <h3 align="center">Muffin</h3>
     <p align="center">Transactional Email Service Built With Ruby on Rails.</p>
     <p align="center">
@@ -7,7 +7,7 @@
             <img src="https://github.com/Clivern/Muffin/actions/workflows/build.yml/badge.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/releases">
-            <img src="https://img.shields.io/badge/Version-0.1.0-red.svg">
+            <img src="https://img.shields.io/badge/Version-0.1.1-red.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/blob/master/LICENSE">
             <img src="https://img.shields.io/badge/LICENSE-MIT-orange.svg">
