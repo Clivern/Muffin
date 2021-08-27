@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.0" width="240" />
     <h3 align="center">Muffin</h3>
-    <p align="center">Transactional Email Service.</p>
+    <p align="center">Transactional Email Service on RoR.</p>
     <p align="center">
         <a href="https://github.com/Clivern/Muffin/actions/workflows/build.yml">
             <img src="https://github.com/Clivern/Muffin/actions/workflows/build.yml/badge.svg">
@@ -20,19 +20,30 @@
 
 ### Getting Started
 
-In order to run muffin, you need `ruby` >= `2.7.4` and `nodejs`. Then run the following commands:
+In order to run muffin, you need `ruby` `>=` `2.7.4` and `nodejs`. Then run the following commands:
 
 ```zsh
 $ gem install bundler
 
 $ make setup
-
 ```
 
-To run the application
+To run the application:
 
-```
+```zsh
 $ make run
+```
+
+To run test cases:
+
+```zsh
+$ make ci
+```
+
+To list all commands:
+
+```zsh
+$ make
 ```
 
 
