@@ -27,6 +27,41 @@ run:
 	./bin/rails s
 
 
+## dbconsole: Run Application DB Console.
+.PHONY: dbconsole
+dbconsole:
+	@echo ">> ============== Run Application DB Console ============== <<"
+	./bin/rails dbconsole
+
+
+## console: Run Application Console.
+.PHONY: console
+console:
+	@echo ">> ============== Run Application Console ============== <<"
+	./bin/rails console
+
+
+## about: Get Application Info.
+.PHONY: about
+about:
+	@echo ">> ============== Get Application Info ============== <<"
+	./bin/rails about
+
+
+## stats: Get Code Stats.
+.PHONY: stats
+stats:
+	@echo ">> ============== Get Code Stats ============== <<"
+	./bin/rails stats
+
+
+## version: Get Application Version.
+.PHONY: version
+version:
+	@echo ">> ============== Get Application Version ============== <<"
+	./bin/rails version
+
+
 ## ci: Run all CI tests.
 .PHONY: ci
 ci: test
