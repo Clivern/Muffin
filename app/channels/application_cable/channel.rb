@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 #
-# Muffin - Transactional Email Service.
+# Muffin - Ruby on Rails in Action.
 #
 # Copyright 2021 Clivern. All rights reserved.
 # Use of this source code is governed by the MIT
