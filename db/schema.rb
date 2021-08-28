@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
+#
+# Muffin - Ruby on Rails in Action.
+#
+# Copyright 2021 Clivern. All rights reserved.
+# Use of this source code is governed by the MIT
+# license that can be found in the LICENSE file.
+#
+#
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,6 +22,7 @@
 
 ActiveRecord::Schema.define(version: 2021_10_27_205140) do
 
+  # Options Table
   create_table "options", force: :cascade do |t|
     t.string "key"
     t.text "value"

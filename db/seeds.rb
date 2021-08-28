@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
+#
+# Muffin - Ruby on Rails in Action.
+#
+# Copyright 2021 Clivern. All rights reserved.
+# Use of this source code is governed by the MIT
+# license that can be found in the LICENSE file.
+#
+#
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
