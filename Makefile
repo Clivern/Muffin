@@ -62,6 +62,20 @@ version:
 	./bin/rails version
 
 
+## seed: Seed Application Database.
+.PHONY: seed
+seed:
+	@echo ">> ============== Seed Application Database ============== <<"
+	./bin/rails db:seed
+
+
+## routes: Get Application Routes.
+.PHONY: routes
+routes:
+	@echo ">> =============== Get Application Routes =============== <<"
+	./bin/rails routes
+
+
 ## ci: Run all CI tests.
 .PHONY: ci
 ci: test
