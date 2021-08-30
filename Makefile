@@ -76,6 +76,13 @@ routes:
 	./bin/rails routes
 
 
+## migrate: Migrate Database Tables.
+.PHONY: migrate
+migrate:
+	@echo ">> ============== Migrate Database Tables ============== <<"
+	./bin/rails db:migrate
+
+
 ## ci: Run all CI tests.
 .PHONY: ci
 ci: test
