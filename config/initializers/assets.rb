@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 #
-# Muffin - Ruby on Rails in Action.
+# Muffin - Coding Playground Platform.
 #
 # Copyright 2021 Clivern. All rights reserved.
 # Use of this source code is governed by the MIT
