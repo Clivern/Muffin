@@ -24,7 +24,7 @@ class SnippetController < ApiController
 
   # Creates a New Snippet
   def create
-    req = ActiveSupport::JSON.decode(request.body.read)
+    data = ActiveSupport::JSON.decode(request.body.read)
 
     # Create a unique snippet slug
     loop do
@@ -36,11 +36,11 @@ class SnippetController < ApiController
 
     @snippet = Snippet.create(
       slug: @slug,
-      language: req["language"] == nil ? '' : req["language"],
-      title: req["title"] == nil ? '' : req["title"],
-      code: req["code"] == nil ? '' : req["code"],
-      password: req["password"] == nil ? '' : req["password"],
-      is_public: req["is_public"] == nil ? true : req["is_public"],
+      language: data["language"] == nil ? '' : data["language"],
+      title: data["title"] == nil ? '' : data["title"],
+      code: data["code"] == nil ? '' : data["code"],
+      password: data["password"] == nil ? '' : data["password"],
+      is_public: data["is_public"] == nil ? true : data["is_public"],
       created_at: DateTime.now,
       updated_at: DateTime.now
     )

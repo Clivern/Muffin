@@ -28,17 +28,17 @@ class OptionController < ApiController
 
   # Creates an Option
   def create
-    req = ActiveSupport::JSON.decode(request.body.read)
+    data = ActiveSupport::JSON.decode(request.body.read)
 
-    @option = Option.find_by_key(req["key"])
+    @option = Option.find_by_key(data["key"])
 
     if @option
       render json: {'errorMessage': 'Option already exists.'}, status: 400
     else
       @option = Option.create(
-        key: req["key"] == nil ? "" : req["key"],
-        value: req["value"] == nil ? "" : req["value"],
-        autoload: req["autoload"] == nil ? false : req["autoload"],
+        key: data["key"] == nil ? "" : data["key"],
+        value: data["value"] == nil ? "" : data["value"],
+        autoload: data["autoload"] == nil ? false : data["autoload"],
         created_at: DateTime.now,
         updated_at: DateTime.now
       )
@@ -53,13 +53,13 @@ class OptionController < ApiController
 
   # Updates an Option
   def update
-    req = ActiveSupport::JSON.decode(request.body.read)
+    data = ActiveSupport::JSON.decode(request.body.read)
 
     @option = Option.find_by_key(params[:key])
 
     if @option
-      @option.value = req["value"] == nil ? "" : req["value"]
-      @option.autoload = req["autoload"] == nil ? false : req["autoload"]
+      @option.value = data["value"] == nil ? "" : data["value"]
+      @option.autoload = data["autoload"] == nil ? false : data["autoload"]
       @option.updated_at = DateTime.now
       @option.save
 
