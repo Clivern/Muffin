@@ -8,7 +8,7 @@
 # license that can be found in the LICENSE file.
 #
 
-class HealthController < ApplicationController
+class HealthController < ApiController
   def index
     render :json => {:status => "ok"}
   end
