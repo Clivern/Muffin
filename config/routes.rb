@@ -9,17 +9,20 @@
 #
 
 Rails.application.routes.draw do
+  # Home Route
   get '/', to: 'home#show'
+
+  # Health Route
   get '_health', to: 'health#index'
 
-  # Option Routes
+  # Option Route
   get "/api/v1/option", to: "option#index"
   get "/api/v1/option/:key", to: "option#show"
   put "/api/v1/option/:key", to: "option#update"
   post "/api/v1/option", to: "option#create"
   delete "/api/v1/option/:key", to: "option#destroy"
 
-  # Snippet Routes
+  # Snippet Route
   get "/api/v1/snippet/:slug", to: "snippet#show"
   get "/api/v1/snippet/:slug/output", to: "snippet#output"
   post "/api/v1/snippet", to: "snippet#create"
