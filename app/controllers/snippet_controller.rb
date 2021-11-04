@@ -53,6 +53,40 @@ class SnippetController < ApiController
     end
   end
 
+  # Updates a Snippet
+  def update
+    data = ActiveSupport::JSON.decode(request.body.read)
+
+    @snippet = Snippet.find_by_slug(params[:slug])
+
+    if @snippet
+      @snippet.language = data["language"] == nil ? '' : data["language"]
+      @snippet.version = data["version"] == nil ? '' : data["version"]
+      @snippet.title = data["title"] == nil ? '' : data["title"]
+      @snippet.code = data["code"] == nil ? '' : data["code"]
+      @snippet.password = data["password"] == nil ? '' : data["password"]
+      @snippet.is_public = data["is_public"] == nil ? true : data["is_public"]
+      @snippet.updated_at = DateTime.now
+      @snippet.save
+
+      render json: @snippet, status: 200
+    else
+      render json: {'errorMessage': 'Snippet not found.'}, status: 404
+    end
+  end
+
+  # Deletes a Snippet
+  def destroy
+    @snippet = Snippet.find_by_slug(params[:slug])
+
+    if @snippet
+      @snippet.destroy
+      render json: {}, status: 204
+    else
+      render json: {'errorMessage': 'Snippet not found.'}, status: 404
+    end
+  end
+
   # Runs a snippet and return output
   # https://gist.github.com/Clivern/a7b03a4d90da991c49aa976b79e345ca
   def output
