@@ -74,7 +74,7 @@ class SnippetController < ApiController
 
         render json: {'output': output}, status: 200
       rescue => e
-        render json: {'errorMessage': 'Failure while running the code.'}, status: 400
+        render json: {'errorMessage': 'Failure while running the code: %s' % e}, status: 400
       end
     else
       render json: {'errorMessage': 'Snippet not found.'}, status: 404
