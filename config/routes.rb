@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   get "/api/v1/snippet/:slug", to: "snippet#show"
   get "/api/v1/snippet/:slug/output", to: "snippet#output"
   post "/api/v1/snippet", to: "snippet#create"
+  put "/api/v1/snippet/:slug", to: "snippet#update"
+  delete "/api/v1/snippet/:slug", to: "snippet#destroy"
 end

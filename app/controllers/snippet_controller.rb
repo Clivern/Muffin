@@ -101,6 +101,8 @@ class SnippetController < ApiController
         @snippet.code
       )
 
+      render json: {'output': runner.class.to_s}, status: 200
+
       begin
         runner.isolate_environment
         runner.build_image
