@@ -1,13 +1,13 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/Clivern/Muffin/main/assets/logo.png?v=0.1.3" width="240" />
     <h3 align="center">Muffin</h3>
-    <p align="center">Coding Playground Platform.</p>
+    <p align="center">Multi-Language Coding Playground Platform.</p>
     <p align="center">
         <a href="https://github.com/Clivern/Muffin/actions/workflows/build.yml">
             <img src="https://github.com/Clivern/Muffin/actions/workflows/build.yml/badge.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/releases">
-            <img src="https://img.shields.io/badge/Version-0.1.3-red.svg">
+            <img src="https://img.shields.io/badge/Version-0.1.4-red.svg">
         </a>
         <a href="https://github.com/Clivern/Muffin/blob/master/LICENSE">
             <img src="https://img.shields.io/badge/LICENSE-MIT-cyan.svg">

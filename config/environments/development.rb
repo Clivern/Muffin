@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 #
-# Muffin - Coding Playground Platform.
+# Muffin - Multi-Language Coding Playground Platform.
 #
 # Copyright 2021 Clivern. All rights reserved.
 # Use of this source code is governed by the MIT
