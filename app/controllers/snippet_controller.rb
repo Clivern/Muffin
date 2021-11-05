@@ -101,6 +101,7 @@ class SnippetController < ApiController
         @snippet.code
       )
 
+      # @TODO Remove this line
       render json: {'output': runner.class.to_s}, status: 200
 
       begin
